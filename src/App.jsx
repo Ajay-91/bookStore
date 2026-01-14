@@ -43,8 +43,8 @@ function App() {
         <Route path="/admin-careers" element={<AdminCarrers />} />
         <Route path="/admin-books" element={<AdminBooks />} />
         <Route path="/admin-settings" element={<AdminSettings />} />
-        <Route path="/payement-success" element={<PaymentSuccess />} />
-        <Route path="/payement-failure" element={<PaymentFailure />} />
+        <Route path="/payment-success" element={<PaymentSuccess />} />
+        <Route path="/payment-failure" element={<PaymentFailure />} />
         <Route path="/*" element={<Pnf />} />
       </Routes>
       <ToastContainer
