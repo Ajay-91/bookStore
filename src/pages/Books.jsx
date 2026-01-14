@@ -113,13 +113,13 @@ const Books = () => {
               <div className="col-span-5 grid grid-cols-4 gap-5 ">
                 {bookData?.map((eachBook, index) => (
                   <div className="w-full " key={index}>
-                    <div className="max-w-sm rounded overflow-hidden shadow-lg mx-auto">
-                      <img
-                        className="w-full"
+                    <div className="h-140 rounded overflow-hidden shadow-lg mx-auto">
+                      <div className="flex justify-center"><img
+                        className="h-90"
                         src={eachBook.imgURL}
                         alt="Book Cover"
-                      />
-                      <div className="px-6 py-4">
+                      /></div>
+                      <div className="px-3 py-4">
                         <div className="font-bold text-xl mb-2">
                           {eachBook.title}
                         </div>
@@ -127,7 +127,7 @@ const Books = () => {
                           {eachBook.author}
                         </p>
                       </div>
-                      <div className="p-6 flex">
+                      <div className="p-2 flex">
                         <FaRupeeSign className="text-md my-1" />
                         <span className="line-through rounded-full text-md font-semibold text-gray-700 mr-2 mb-2">
                           {eachBook.price}

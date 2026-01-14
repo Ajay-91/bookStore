@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import img1 from "../assets/original-eafb1f025003330fb3d1593f66991853.gif";
 import { toast } from "react-toastify";
 import { SampleBook } from "../services/allAPIs";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [bookData, setBookData] = useState([]);
@@ -60,10 +61,10 @@ const Home = () => {
           <h3 className="text-1xl">NEW ARRIVALS</h3>
           <h2 className="text-3xl">Explore Our Latest Collection</h2>
           {bookData?.length > 0 && (
-            <div className="grid grid-cols-4 gap-4 pt-7 container">
+            <div className="grid grid-cols-4 gap-10 pt-7 container">
               {bookData?.map((book, index) => (
-                <div className="h-100 shadow w-70" key={index}>
-                  <img className="w-full" src={img1} alt="no image" />
+                <div className="h-100 shadow w-70 p-10" key={index}>
+                  <img className="w-45 " src={book.imgURL} alt="no image" />
                   <h4>{book.title}</h4>
                   <h4>{book.author}</h4>
                   <h4>{book.price}</h4>
@@ -71,9 +72,9 @@ const Home = () => {
               ))}
             </div>
           )}
-          <button className="btn bg-blue-900 p-3 text-1xl text-white mt-5">
+          <div className="mt-10"><Link to="/books" className="btn bg-blue-900 p-3 text-1xl text-white mt-5">
             Explore More
-          </button>
+          </Link></div>
         </div>
 
         <div className="grid grid-cols-2 gap-10 mb-10">
