@@ -1,0 +1,48 @@
+1.npm i @react-oauth/google
+
+2.Google console
+
+->create a new project
+->credentials ->consent screen
+->get  client id
+
+3.inside main.jsx
+import @react-oauth/google
+
+Bearer authorization is a n HTTP authentication schema . in this approach 
+
+Multer is an npm package commonly used in Node.js applications for handling multipart/form data, particularly for file uploads. It simplifies the process of handling file uploads by providing middleware that can be easily integrated into Express.js applications.
+
+Features of npm multer
+->File Uploads: Allows uploading files from client-side forms to the server.
+->Middleware: Integrates seamlessly with Express.js middleware, making it easy to handle file uploads within routes.
+->File Storage: Provides options for storing uploaded files on the server, such as in-memory storage, disk storage, or using a custom storage engine.
+->File Filtering: Supports filtering uploaded files based on file type, size, and other criteria.
+->Error Handling: Offers error handling for file uploads, including handling file size limits, invalid file types, and other upload-related errors.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+STRIPE
+
+CORE PRINCIPLE
+
+react/fe- create payment ui and collects details
+
+node/be-creates payment intent and confirms payment
+
+stripe-handles the payment gaateway
+
+KEYS:
+Publishable key: 
+* used to  identify which stripe account the request belongs to.
+* initialises stripe elementss(UI)
+* collects card details securley.
+
+Secret Key:
+* initialises payment,captures payments,issues refunds,etc
+
+Payment Flow:
+1. Load Stripe UI- publishable
+2. Enter card details
+3. initialises the payment-Secret key
+4. Confirm Payment- both

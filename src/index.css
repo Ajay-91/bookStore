@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.Img{
+    background-image: url('../src/assets/photo-1610072175216-df383b91b89d.jpg');
+}
